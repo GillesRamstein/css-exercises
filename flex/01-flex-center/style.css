@@ -3,6 +3,12 @@
   border: 4px solid midnightblue;
   width: 400px;
   height: 300px;
+  display: flex;
+  /*straight forward solution:*/
+  /*
+  justify-content: center;
+  align-items: center;
+  */
 }
 
 .box {
@@ -12,4 +18,6 @@
   border: 6px solid maroon;
   width: 80px;
   height: 80px;
+  /*magic trick:*/
+  margin: auto;
 }

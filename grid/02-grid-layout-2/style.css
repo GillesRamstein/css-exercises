@@ -8,6 +8,11 @@ body, html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+
+  /* Solution */
+  display: grid;
+  grid: repeat(2, 1fr) 5fr 1fr / 1fr 4fr ;
+  gap: 15px;
 }
 
 .container div {

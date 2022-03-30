@@ -5,6 +5,10 @@
 
 .container {
   text-align: center;
+
+  display: grid;
+  grid: 95px 45px 1fr 50px / 1fr 4fr;
+  gap: 4px;
 }
 
 .container div {
@@ -17,6 +21,11 @@
 
 .header {
   background-color: #393f4d;
+
+  grid-column: 1 / -1;
+  display: grid;
+  grid: 1fr / 1fr 3fr;
+  align-items: center;
 }
 
 .logo {
@@ -26,15 +35,24 @@
 }
 
 .menu ul {
+  display: grid;
+  grid: 1fr / repeat(4, 1fr);
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+
+  display: grid;
 }
 
 .sidebar {
   background-color: #FF7755;
+
+  grid-row: 2 / 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
 }
 
 .sidebar .photo {
@@ -46,6 +64,9 @@
 }
 
 .photo  {
+
+  display: grid;
+  place-items: center;
 }
 
 .sidebar .side-content {
@@ -53,6 +74,9 @@
   color: black;
   font-size: 16px;
   font-weight: normal;
+
+  display: grid;
+  place-items: center;
 }
 
 .nav {
@@ -60,15 +84,23 @@
 }
 
 .nav ul {
+  display: grid;
+  grid: 1fr / repeat(3, 1fr);
 }
 
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+
+  display: grid;
 }
 
 .article {
   background-color: #bccbde;
+
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .article p {
@@ -82,6 +114,8 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+
+  height: 200px;
 }
 
 .card p {
@@ -97,6 +131,10 @@
 
 .footer {
   background-color: #393f4d;
+
+  grid-column: 1 / -1;
+  display: grid;
+  align-items: center;
 }
 
 .footer p {

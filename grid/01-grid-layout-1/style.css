@@ -1,47 +1,145 @@
-body, html {
-  height: 100%;
-  margin: 0;
+body,
+html {
+    height: 100%;
+    margin: 0;
 }
 
 .container {
-  text-align: center;
-  height: 100%;
-  padding: 16px;
-  box-sizing: border-box;
+    text-align: center;
+    height: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid: 1fr 1fr 4fr 1fr / 1fr 4fr;
+    gap: 15px;
 }
 
 .container div {
-  padding: 15px;
-  font-size: 32px;
-  font-family: Helvetica;
-  font-weight: bold;
-  color: white;
-  border-radius: 15px;
+    padding: 15px;
+    font-size: 32px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: white;
+    border-radius: 15px;
 }
 
 .header {
-  background-color: #FFDE22;
+    background-color: #ffde22;
+    grid-area: 1 / 1 / 2 / 4;
 }
 
 .sidebar {
-  background-color: #FF7755;
+    background-color: #ff7755;
+    grid-area: 2 / 1 / 4 / 2;
 }
 
 .nav {
-  background-color: #00DDFF;
+    background-color: #00ddff;
+    grid-area: 2 / 2 / 3 / 4;
 }
 
 .article {
-  background-color: #bccbde;
+    background-color: #bccbde;
+    grid-area: 3 / 2 / 4 / 3;
 }
 
 .article p {
-  font-size: 18px;
-  font-family: sans-serif;
-  color: white;
-  text-align: left;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
 }
 
 .footer {
-  background-color: #393f4d;
+    background-color: #393f4d;
+    grid-area: 4 / 1 / 5 / 3;
+}
+
+
+/* Solution 1 */
+
+/* .container {
+  display: grid;
+  grid: 1fr 1fr 4fr 1fr / 1fr 4fr;
+  gap: 15px;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.sidebar {
+    grid-area: 2 / 1 / 4 / 2;
+}
+
+.nav {
+    grid-area: 2 / 2 / 3 / 4;
+}
+
+.article {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.footer {
+    grid-area: 4 / 1 / 5 / 3;
+} */
+
+
+/* Solution 2 */
+
+/* .container {
+  display: grid;
+  grid: 1fr 1fr 4fr 1fr / 1fr 4fr;
+  gap: 15px;
+}
+
+.header, .footer {
+    grid-column: 1 / 4;
+}
+
+.sidebar {
+    grid-row: 2 / 4;
+}
+
+.nav {
+    grid-column: 2 / 3;
+}
+
+.article {
+    grid-area: 3 / 2 / 4 / 3;
+} */
+
+
+/* Solution 3 */
+
+.container {
+  display: grid;
+  grid:
+    "header header" 1fr
+    "sidebar nav" 1fr
+    "sidebar article" 5fr
+    "footer footer" 1fr 
+    / 1fr 4fr;
+  gap: 15px;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.article {
+    grid-area: article;
+}
+
+.footer {
+  grid-area: footer;
 }
